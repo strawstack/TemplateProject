@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://ccqr1gck02ttt"]
+[gd_scene load_steps=11 format=3 uid="uid://ccqr1gck02ttt"]
 
 [ext_resource type="Texture2D" uid="uid://cl6lkrwhaqea2" path="res://grid_tile_atlas.png" id="1_lbqb2"]
 [ext_resource type="Texture2D" uid="uid://cf5dxl1fny7ga" path="res://tile_white.png" id="3_0c077"]
 [ext_resource type="Script" path="res://FreeMovement.gd" id="3_hyt3h"]
 [ext_resource type="Script" path="res://Text.gd" id="4_iho3h"]
 [ext_resource type="JSON" path="res://dialogue.json" id="5_045xe"]
+[ext_resource type="JSON" path="res://d2.json" id="6_wdj41"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pemty"]
 texture = ExtResource("1_lbqb2")
@@ -54,7 +55,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(0, 393223, 0, 1, 393223, 0, 2, 393223, 0, 3, 393223, 0, 4, 393223, 0, 5, 393223, 0, 6, 393223, 0, 7, 393223, 0, 8, 393223, 0, 9, 393223, 0, 10, 393223, 0, 11, 393223, 0, 12, 393223, 0, 13, 393223, 0, 14, 393223, 0, 15, 393223, 0, 16, 393223, 0, 17, 393223, 0, 18, 393223, 0, 19, 393223, 0, 655379, 393223, 0, 720915, 393223, 0, 720914, 393223, 0, 720913, 393223, 0, 720912, 393223, 0, 720911, 393223, 0, 720910, 393223, 0, 720909, 393223, 0, 720908, 393223, 0, 720907, 393223, 0, 720906, 393223, 0, 720905, 393223, 0, 720904, 393223, 0, 720903, 393223, 0, 720902, 393223, 0, 720901, 393223, 0, 720900, 393223, 0, 720899, 393223, 0, 720898, 393223, 0, 720897, 393223, 0, 720896, 393223, 0, 655360, 393223, 0, 589824, 393223, 0, 524288, 393223, 0, 458752, 393223, 0, 393216, 393223, 0, 327680, 393223, 0, 262144, 393223, 0, 196608, 393223, 0, 131072, 393223, 0, 65536, 393223, 0, 65555, 393223, 0, 131091, 393223, 0, 196627, 393223, 0, 262163, 393223, 0, 327699, 393223, 0, 393235, 393223, 0, 458771, 393223, 0, 524307, 393223, 0, 589843, 393223, 0, 524294, 458759, 0, 458758, 393223, 0, 393222, 458759, 0, 327686, 458759, 0, 262150, 458759, 0, 196614, 458759, 0, 131078, 458759, 0, 65542, 458759, 0, 65541, 458759, 0, 65540, 458759, 0, 65539, 458759, 0, 65538, 458759, 0, 65537, 458759, 0, 131073, 458759, 0, 196609, 458759, 0, 262145, 458759, 0, 327681, 458759, 0, 393217, 458759, 0, 458753, 458759, 0, 524289, 458759, 0, 589825, 458759, 0, 655361, 393223, 0, 655362, 393223, 0, 589826, 458759, 0, 524290, 458759, 0, 458754, 458759, 0, 393218, 458759, 0, 327682, 458759, 0, 262146, 458759, 0, 196610, 458759, 0, 131074, 458759, 0, 131075, 458759, 0, 196611, 458759, 0, 262147, 393223, 0, 655363, 393223, 0, 655364, 393223, 0, 524292, 458759, 0, 458756, 393223, 0, 393220, 458759, 0, 327684, 458759, 0, 262148, 458759, 0, 196612, 458759, 0, 131076, 458759, 0, 131077, 458759, 0, 196613, 458759, 0, 262149, 458759, 0, 327685, 458759, 0, 393221, 458759, 0, 458757, 393223, 0, 524293, 458759, 0, 655365, 393223, 0, 655366, 393223, 0, 524295, 458759, 0, 458759, 458759, 0, 393223, 458759, 0, 196615, 393223, 0, 131079, 458759, 0, 65543, 458759, 0, 65544, 458759, 0, 131080, 458759, 0, 196616, 393223, 0, 393224, 458759, 0, 458760, 458759, 0, 524296, 458759, 0, 589832, 458759, 0, 655368, 393223, 0, 655367, 393223, 0, 655369, 393223, 0, 589833, 458759, 0, 524297, 458759, 0, 458761, 458759, 0, 393225, 458759, 0, 327689, 458759, 0, 262153, 458759, 0, 196617, 458759, 0, 131081, 458759, 0, 65545, 458759, 0, 65546, 458759, 0, 131082, 458759, 0, 196618, 458759, 0, 262154, 458759, 0, 327690, 458759, 0, 393226, 458759, 0, 458762, 458759, 0, 524298, 458759, 0, 589834, 458759, 0, 655370, 393223, 0, 655371, 393223, 0, 589835, 458759, 0, 524299, 458759, 0, 458763, 458759, 0, 393227, 458759, 0, 327691, 458759, 0, 262155, 458759, 0, 196619, 458759, 0, 65547, 458759, 0, 65548, 458759, 0, 196620, 458759, 0, 262156, 458759, 0, 327692, 458759, 0, 393228, 393223, 0, 524300, 458759, 0, 589836, 458759, 0, 655372, 393223, 0, 655373, 393223, 0, 589837, 458759, 0, 524301, 458759, 0, 393229, 458759, 0, 327693, 458759, 0, 262157, 458759, 0, 196621, 393223, 0, 65549, 458759, 0, 65550, 458759, 0, 196622, 393223, 0, 262158, 458759, 0, 327694, 458759, 0, 393230, 458759, 0, 458766, 458759, 0, 524302, 458759, 0, 589838, 458759, 0, 655374, 393223, 0, 655375, 393223, 0, 589839, 458759, 0, 524303, 458759, 0, 458767, 458759, 0, 393231, 458759, 0, 327695, 458759, 0, 262159, 458759, 0, 196623, 393223, 0, 65551, 458759, 0, 65552, 458759, 0, 458768, 458759, 0, 524304, 458759, 0, 589840, 458759, 0, 655376, 393223, 0, 655377, 393223, 0, 589841, 458759, 0, 524305, 458759, 0, 458769, 458759, 0, 393233, 458759, 0, 327697, 458759, 0, 262161, 458759, 0, 196625, 458759, 0, 131089, 458759, 0, 65553, 458759, 0, 65554, 458759, 0, 131090, 458759, 0, 196626, 458759, 0, 262162, 458759, 0, 327698, 458759, 0, 393234, 458759, 0, 458770, 458759, 0, 524306, 458759, 0, 589842, 458759, 0, 655378, 393223, 0, 589831, 458759, 0, 589830, 458759, 0, 589829, 458759, 0, 589828, 458759, 0, 589827, 458759, 0, 524291, 458759, 0, 458755, 393223, 0, 393219, 393223, 0, 327683, 393223, 0, 262151, 393223, 0, 327687, 458759, 0, 262152, 393223, 0, 327688, 458759, 0, 131084, 458759, 0, 131083, 458759, 0, 131085, 458759, 0, 131086, 458759, 0, 131087, 458759, 0, 131088, 458759, 0, 196624, 393223, 0, 262160, 393223, 0, 327696, 393223, 0, 393232, 393223, 0, 458764, 393223, 0, 458765, 458759, 0)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(544, 416)
+position = Vector2(224, 160)
 
 [node name="FreeMovement" type="Node2D" parent="CharacterBody2D"]
 script = ExtResource("3_hyt3h")
@@ -72,38 +73,72 @@ shape = SubResource("CircleShape2D_7hes6")
 visible = false
 
 [node name="ColorRect" type="ColorRect" parent="TextBox/Box"]
-offset_left = 192.0
-offset_top = 480.0
-offset_right = 1088.0
-offset_bottom = 672.0
+offset_left = 256.0
+offset_top = 544.0
+offset_right = 1024.0
+offset_bottom = 688.0
 color = Color(0.129412, 0.129412, 0.129412, 1)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="TextBox/Box"]
-offset_left = 224.0
-offset_top = 512.0
-offset_right = 1056.0
-offset_bottom = 640.0
-theme_override_font_sizes/normal_font_size = 24
+[node name="Label" type="Label" parent="TextBox/Box"]
+offset_left = 368.0
+offset_top = 576.0
+offset_right = 1008.0
+offset_bottom = 688.0
 text = "Hello this is a test. Hello this is a test. Hello this is a test. Hello this is a test. Hello this is a test. Hello this is a test. Hello this is a test. Hello this is a test. Hello this is a test. Hello this is a test. Hello this is a test"
+autowrap_mode = 2
 
-[node name="NextLabel" type="RichTextLabel" parent="TextBox/Box"]
-offset_left = 1008.0
-offset_top = 624.0
-offset_right = 1072.0
+[node name="NextLabel" type="Label" parent="TextBox/Box"]
+offset_left = 944.0
+offset_top = 640.0
+offset_right = 1008.0
 offset_bottom = 672.0
-theme_override_font_sizes/normal_font_size = 24
 text = "Next"
+horizontal_alignment = 2
+vertical_alignment = 2
 
-[node name="Area2D" type="Area2D" parent="TextBox"]
+[node name="Icon" type="Node2D" parent="TextBox"]
+
+[node name="Richard" type="Sprite2D" parent="TextBox/Icon"]
+visible = false
+modulate = Color(0.215686, 0.423529, 0.701961, 1)
+position = Vector2(320, 608)
+texture = ExtResource("3_0c077")
+
+[node name="Nevi" type="Sprite2D" parent="TextBox/Icon"]
+visible = false
+modulate = Color(0.792157, 0.701961, 0.345098, 1)
+position = Vector2(320, 608)
+texture = ExtResource("3_0c077")
+
+[node name="Pat" type="Sprite2D" parent="TextBox/Icon"]
+visible = false
+modulate = Color(0.861709, 0.602879, 0.834549, 1)
+position = Vector2(320, 608)
+texture = ExtResource("3_0c077")
+
+[node name="Dialogue" type="Area2D" parent="TextBox"]
 position = Vector2(672, 352)
 script = ExtResource("4_iho3h")
 dialogueFile = ExtResource("5_045xe")
 
-[node name="Sprite2D" type="Sprite2D" parent="TextBox/Area2D"]
+[node name="Sprite2D" type="Sprite2D" parent="TextBox/Dialogue"]
 modulate = Color(0.952941, 0.756863, 0, 0.470588)
 texture = ExtResource("3_0c077")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TextBox/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextBox/Dialogue"]
 shape = SubResource("CircleShape2D_ipa6t")
 
-[connection signal="body_entered" from="TextBox/Area2D" to="TextBox/Area2D" method="_on_body_entered"]
+[node name="Dialogue2" type="Area2D" parent="TextBox"]
+position = Vector2(416, 544)
+script = ExtResource("4_iho3h")
+dialogueFile = ExtResource("6_wdj41")
+
+[node name="Sprite2D" type="Sprite2D" parent="TextBox/Dialogue2"]
+modulate = Color(0.952941, 0.756863, 0, 0.470588)
+texture = ExtResource("3_0c077")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextBox/Dialogue2"]
+shape = SubResource("CircleShape2D_ipa6t")
+
+[connection signal="body_entered" from="TextBox/Dialogue" to="TextBox/Dialogue" method="_on_body_entered"]
+[connection signal="body_entered" from="TextBox/Dialogue2" to="TextBox/Dialogue2" method="_on_body_entered"]

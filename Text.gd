@@ -4,7 +4,7 @@ extends Node2D
 
 @export var charSpeed = 0.03
 @export var pauseSpeed = 0.2
-@export var chunkLimit = 210
+@export var chunkLimit = 233
 
 # Dialogue is a list of data items
 var dialogueIndex = 0
@@ -40,7 +40,7 @@ func _ready():
 	# Get References
 	textBox = get_parent()
 	box = textBox.get_node("Box")
-	textLabel = textBox.get_node("Box/RichTextLabel")
+	textLabel = textBox.get_node("Box/Label")
 	nextLabel = textBox.get_node("Box/NextLabel")
 	
 	# Set initial visibility
@@ -85,6 +85,7 @@ func _process(delta):
 				# End dialogue
 				if dialogueIndex == full_dialogue.size():
 					dialogueInProgress = false
+					hideIcons()
 					box.visible = false
 
 				else:
@@ -108,6 +109,10 @@ func beginDialogue():
 func displayData(data):
 	currentChunks = chunkText(data["text"])
 	currentText = currentChunks[segmentIndex]
+	
+	# Set Icon
+	hideIcons()
+	textBox.get_node("Icon/" + data["name"]).visible = true
 	
 	# Configure text to be 0 chars showing
 	setVisibleCharacters(0)
@@ -150,6 +155,10 @@ func maybeAddThreeDots():
 	if segmentIndex < currentChunks.size() - 1:
 		textLabel.set_text(textLabel.get_text() + "...")
 		setVisibleCharacters(charIndex + 3)
+
+func hideIcons():
+	for icon in textBox.get_node("Icon").get_children():
+		icon.visible = false
 
 func _on_body_entered(body):
 	beginDialogue()

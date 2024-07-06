@@ -1,0 +1,14 @@
+[
+	{
+		"name": "Richard",
+		"text": "Hello, how are you?"
+	},
+	{
+		"name": "Pat",
+		"text": "I'm good. Have a nice day!"
+	},
+	{
+		"name": "Richard",
+		"text": "Thanks! Bye."
+	}
+]
