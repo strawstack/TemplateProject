@@ -1,14 +1,14 @@
 extends Node2D
 
 @export var speed = 400
+
 var root
 
 func _ready():
 	root = get_parent() # Movement script affects character root
 
 func _process(delta):
-	if (Input.is_action_pressed("action")):
-		pass
+	pass
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
