@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://ccqr1gck02ttt"]
+[gd_scene load_steps=20 format=3 uid="uid://ccqr1gck02ttt"]
 
 [ext_resource type="Script" path="res://GameController.gd" id="1_i3lv8"]
 [ext_resource type="Texture2D" uid="uid://cl6lkrwhaqea2" path="res://grid_tile_atlas.png" id="1_lbqb2"]
@@ -12,6 +12,7 @@
 [ext_resource type="JSON" path="res://dialogue.json" id="5_045xe"]
 [ext_resource type="Script" path="res://RotateToFace.gd" id="5_xfhoy"]
 [ext_resource type="JSON" path="res://d2.json" id="6_wdj41"]
+[ext_resource type="Script" path="res://TextBox.gd" id="10_d2bji"]
 [ext_resource type="Script" path="res://Item.gd" id="13_uu6lg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pemty"]
@@ -168,6 +169,7 @@ script = ExtResource("5_xfhoy")
 shape = SubResource("CircleShape2D_7hes6")
 
 [node name="TextBox" type="Node2D" parent="."]
+script = ExtResource("10_d2bji")
 
 [node name="Box" type="Node2D" parent="TextBox"]
 visible = false
