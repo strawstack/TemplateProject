@@ -1,14 +1,18 @@
 extends Node2D
 
+var gc
+
 var targetItem = null
 
-var items = {}
+func _ready():
+	gc = get_node("/root/main/GameController")
 
 func _process(delta):
 	if (Input.is_action_just_pressed("action")):
 		if (targetItem):
-			items[targetItem.name] = true
-			targetItem.get_parent().queue_free()
+			if targetItem.get_parent().visible:
+				targetItem.get_parent().visible = false
+				gc.addItem(targetItem.get_parent())
 
 func _physics_process(delta):
 	var small = 0.0001
