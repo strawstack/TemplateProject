@@ -1,5 +1,7 @@
 extends Node2D
 
+enum InteractType {ITEM, DIALOGUE, OTHER}
+
 var gc
 
 var targetItem = null
@@ -10,9 +12,7 @@ func _ready():
 func _process(delta):
 	if (Input.is_action_just_pressed("action")):
 		if (targetItem):
-			if targetItem.get_parent().visible:
-				targetItem.get_parent().visible = false
-				gc.addItem(targetItem.get_parent())
+			targetItem.get_parent().action()
 
 func _physics_process(delta):
 	var small = 0.0001
@@ -23,4 +23,4 @@ func _physics_process(delta):
 		var rad = atan2(input_direction.y, input_direction.x)
 		set_rotation(rad)
 
-	targetItem = $RayCast2D.collider
+	targetItem = $RayCast2D.get_collider()

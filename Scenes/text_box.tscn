@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://c17nfqlkjq5cs"]
+
+[ext_resource type="Script" path="res://TextBox.gd" id="1_t2ay2"]
+[ext_resource type="Texture2D" uid="uid://cf5dxl1fny7ga" path="res://Images/tile_white.png" id="2_nl3bw"]
+
+[node name="TextBox" type="Node2D"]
+script = ExtResource("1_t2ay2")
+
+[node name="Box" type="Node2D" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Box"]
+offset_left = 256.0
+offset_top = 544.0
+offset_right = 1024.0
+offset_bottom = 688.0
+color = Color(0.129412, 0.129412, 0.129412, 1)
+
+[node name="Label" type="Label" parent="Box"]
+offset_left = 368.0
+offset_top = 576.0
+offset_right = 1008.0
+offset_bottom = 688.0
+text = "Hello this is a test. Hello this is a test. Hello this is a test. Hello this is a test. Hello this is a test. Hello this is a test. Hello this is a test. Hello this is a test. Hello this is a test. Hello this is a test. Hello this is a test"
+autowrap_mode = 2
+
+[node name="NextLabel" type="Label" parent="Box"]
+offset_left = 944.0
+offset_top = 640.0
+offset_right = 1008.0
+offset_bottom = 672.0
+text = "Next"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Icon" type="Node2D" parent="."]
+
+[node name="Richard" type="Sprite2D" parent="Icon"]
+visible = false
+modulate = Color(0.215686, 0.423529, 0.701961, 1)
+position = Vector2(320, 608)
+texture = ExtResource("2_nl3bw")
+
+[node name="Nevi" type="Sprite2D" parent="Icon"]
+visible = false
+modulate = Color(0.792157, 0.701961, 0.345098, 1)
+position = Vector2(320, 608)
+texture = ExtResource("2_nl3bw")
+
+[node name="Pat" type="Sprite2D" parent="Icon"]
+visible = false
+modulate = Color(0.861709, 0.602879, 0.834549, 1)
+position = Vector2(320, 608)
+texture = ExtResource("2_nl3bw")

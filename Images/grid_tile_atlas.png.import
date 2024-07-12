@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cl6lkrwhaqea2"
-path="res://.godot/imported/grid_tile_atlas.png-5c9a7639a866042ed87051d9968ae1c8.ctex"
+path="res://.godot/imported/grid_tile_atlas.png-77902e11c4a086e43d619cdc63433949.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://grid_tile_atlas.png"
-dest_files=["res://.godot/imported/grid_tile_atlas.png-5c9a7639a866042ed87051d9968ae1c8.ctex"]
+source_file="res://Images/grid_tile_atlas.png"
+dest_files=["res://.godot/imported/grid_tile_atlas.png-77902e11c4a086e43d619cdc63433949.ctex"]
 
 [params]
 

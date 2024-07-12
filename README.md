@@ -2,7 +2,14 @@
 
 Template and boiler plate files for a new Godot project.
 
-- 2D Movement controller
-- Tile map
-  - Wall tile, grid tile
-- Text boxes
+# Todo
+
+- [ ] Make one "interact" type
+  - Precondition (items in inventory, specific world state)
+    - Failure message sent as dialogue
+  - Main action:
+    - Dialogue event
+    - Remove item 
+    - Gain item
+    - Modifiy world state
+  

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqxcg41nnc3n5"]
+
+[ext_resource type="Texture2D" uid="uid://cf5dxl1fny7ga" path="res://Images/tile_white.png" id="1_7qhup"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kesah"]
+size = Vector2(64, 64)
+
+[node name="Item" type="Sprite2D"]
+modulate = Color(0, 0.709804, 0.568627, 1)
+texture = ExtResource("1_7qhup")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_kesah")
