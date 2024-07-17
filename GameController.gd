@@ -1,7 +1,18 @@
 extends Node2D
 
+var state = {}
+
 func _ready():
-	pass
+	initState()
+
+func initState():
+	state['name'] = false
+
+func toggleState(name):
+	state[name] = not state[name]
+
+func setState(name, value):
+	state[name] = value
 
 func addItem(itemRef):
 	get_node("/root/main/Inventory").add(itemRef)
