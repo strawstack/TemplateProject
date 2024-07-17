@@ -7,8 +7,14 @@ enum InteractType {ITEM, DIALOGUE, OTHER}
 # Dialogue file used if interaction is DIALOGUE type
 @export var dialogueFile: Resource
 
-# State that must be true for action to trigger
-@export var inState: Array[String]
+# If this item itself is given to player on success
+@export var giveSelf: bool
+
+# State that must be true/false for action to trigger
+@export var inStateTrue: Array[String]
+@export var inStateFalse: Array[String]
+
+@export var consumeInItems: bool
 
 # Items that must be in inventory for action to trigger
 @export var inItems: Array[Node2D]
@@ -31,25 +37,48 @@ func action():
 		gc.beginDialogue(dialogueFile.data)
 
 	elif type == InteractType.ITEM:
-		if visible and type == InteractType.ITEM:
-				visible = false
-				if inStateValid(inState) and inItemsValid(inItems):
-					setState(stateTrue, true)
-					setState(stateFalse, false)
-					toggleState(stateToggle)
-					giveItems(outItems)
+		if visible and type == InteractType.ITEM and inStateValid(inStateTrue, inStateFalse) and inItemsValid(inItems):
 
-func inStateValid(inState):
-	pass
+			setState(stateTrue, true)
+			setState(stateFalse, false)
+			toggleState(stateToggle)
+
+			# Optional: Remove inItems from inventory
+			if consumeInItems:
+				for itemRef in inItems:
+					gc.removeItem(itemRef)
+
+			# Give interaction target to player
+			if giveSelf:
+				visible = false
+				gc.addItem(self)
+
+			giveItems(outItems)
+
+func inStateValid(inStateTrue, inStateFalse):
+	for name in inStateTrue:
+		if not gc.getState(name):
+			return false
+	for name in inStateFalse:
+		if gc.getState(name):
+			return false
+	return true
 
 func inItemsValid(inItems):
-	pass
+	for itemRef in inItems:
+		var name = itemRef.name
+		if not gc.inventory.contains(name):
+			return false
+	return true
 
 func setState(stateNames, value):
-	pass
+	for name in stateNames:
+		gc.setState(name, value)
 
 func toggleState(stateNames):
-	pass
+	for name in stateNames:
+		gc.toggleState(name)
 
 func giveItems(outItems):
-	pass
+	for itemRef in outItems:
+		gc.addItem(itemRef)
