@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var inventory: CanvasLayer
+@export var textBox: Node2D
 
 var state = {}
 
@@ -30,7 +31,7 @@ func removeItem(itemRef):
 	inventory.remove(itemRef)
 
 func beginDialogue(json):
-	get_node("/root/main/TextBox").beginDialogue(json)
+	textBox.beginDialogue(json)
 
 func _process(delta):
 	pass

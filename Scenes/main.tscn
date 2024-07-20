@@ -59,9 +59,10 @@ radius = 32.0
 
 [node name="main" type="Node"]
 
-[node name="GameController" type="Node2D" parent="." node_paths=PackedStringArray("inventory")]
+[node name="GameController" type="Node2D" parent="." node_paths=PackedStringArray("inventory", "textBox")]
 script = ExtResource("1_tqk0d")
 inventory = NodePath("../Inventory")
+textBox = NodePath("../TextBox")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_c6ks5")
